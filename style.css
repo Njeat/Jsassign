@@ -21,11 +21,11 @@ input[type='submit'], button, [aria-label]{
     margin-top: 10px;
 }
 
-table {
-  width: 100%;
-  border: 1px solid #444444;
+td{
+    padding-right: 10px;
+    text-align: left;
 }
 
-tbody{
-  border: 1px solid #444444;
+.to-do{
+    background-color: transparent !important;
 }
