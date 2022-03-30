@@ -52,20 +52,6 @@ var app = new function(){
 
     };
 
-    this.Count = function(data){
-        var el = document.getElementById('counter');
-        var name = 'Tasks';
-        if(data){
-            if(data == 1){
-                name = 'Task';
-            }
-            el.innerHTML = data+' '+name;
-        }
-        else{
-            el.innerHTML = "No "+ name;
-        }
-    };
-
 }
 
 app.FetchAll();
