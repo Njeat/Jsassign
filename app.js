@@ -1,49 +1,46 @@
 var app = new function(){
-    this.el = document.getElementById("tasks");
+    this.el = document.getElementById('tasks');
     this.tasks=[]
 
     this.FetchAll = function(){
         var data = '';
 
-        if(this.tasks.length>0){
-            for(i=0;i<this.tasks.length;i++){
+        if(this.tasks.length > 0){
+            for(i = 0; i < this.tasks.length; i++){
                 data += '<tr>';
-                data += '<td>'+(i+1)+'. '+this.tasks[i]+'</td>';
-                data += '<td> <button onclick="app.Edit('+i+')" class="btn btn-warning">Edit</button></td> ';
-                data += '<td> <button onclick="app.Delete('+i+')" class="btn btn-danger">Delete</button></td> ';
+                data += '<td>' + (i+1) + '. ' + this.tasks[i] + '</td>';
+                data += '<td> <button onclick="app.Edit(' + i + ')" class="btn btn-warning">Edit</button></td> ';
+                data += '<td> <button onclick="app.Delete(' + i + ')" class="btn btn-danger">Delete</button></td> ';
                 data += '</tr>'
             }
         }
-
-        this.Count(this.tasks.length);
         return this.el.innerHTML = data
     };
 
     this.Add = function(){
         el = document.getElementById('add-todo')
         var task = el.value;
-        if(task){
+        if (task) {
             this.tasks.push(task.trim());
-            el.value='';
+            el.value = '';
             this.FetchAll();
         }
     };
     
-    this.Edit = function(item){
-        el = document.getElementById('edit-todo');
-        this.el.value = this.tasks[item]
+    this.Edit = function(item) {
+        var el = document.getElementById('edit-todo');
+        el.value = this.tasks[item]
         document.getElementById('edit-box').style.display = 'block';
         self = this;
 
         document.getElementById('save-edit').onsubmit = function() {
             var task = el.value;
-            if(task){
-                self.tasks.splice(item, 1, task.trim);
+            if(task) {
+                self.tasks.splice(item, 1, task.trim());
                 self.FetchAll();
                 CloseInput();
             }
         }
-
     };
 
     this.Delete = function(item){
