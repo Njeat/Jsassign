@@ -19,10 +19,10 @@ var app = new function(){
     };
 
     this.Add = function(){
-        el = document.getElementById('add-todo')
+        el = document.getElementById('add-memo')
         var task = el.value;
         if (task) {
-            this.tasks.push(task.trim());
+            this.tasks.push(task.trim());   // trim() 함수는 양옆 공백 없애기
             el.value = '';
             this.FetchAll();
         }
