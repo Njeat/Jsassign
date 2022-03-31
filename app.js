@@ -22,9 +22,9 @@ var app = new function(){
     this.Add = function(){
         el = document.getElementById('add-todo')
         var task = el.value;
-        if(task){
+        if (task) {
             this.tasks.push(task.trim());
-            el.value='';
+            el.value = '';
             this.FetchAll();
         }
     };
@@ -49,20 +49,6 @@ var app = new function(){
         this.tasks.splice(item, 1)
         this.FetchAll()
 
-    };
-
-    this.Count = function(data){
-        var el = document.getElementById('counter');
-        var name = 'Tasks';
-        if(data){
-            if(data == 1){
-                name = 'Task';
-            }
-            el.innerHTML = data+' '+name;
-        }
-        else{
-            el.innerHTML = "No "+ name;
-        }
     };
 
 }
