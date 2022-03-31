@@ -14,18 +14,19 @@
     </div>
     <div class="form">
         <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
-            <input type="text" id="add-memo" placeholder="제목" style="margin-bottom: 10px;">
-            <textarea id="add-word" placeholder="내용을 입력해 주세요"></textarea>
+            <input type="text" id="memo-title" placeholder="제목" style="margin-bottom: 10px;">
+            <textarea id="memo-contents" placeholder="내용을 입력해 주세요"></textarea>
             <input type="submit" value="완료" class="btn btn-primary">
         </form>
         <h4 style="margin-top: 30px;">Memo list:</h4>
-        <div class="card" id="tasks">
+        <div class="card" id="tasks" style="border: 1cm;">
         </div>
     </div>
 
     <div id="edit-box" role="aria-hidden">
         <form action="javascript:void(0);" method="POST" id="save-edit">
-            <input type="text" id="edit-todo">
+            <input type="text" id="edit-title">
+            <textarea id="edit-contents"></textarea>
             <input type="submit" value="Save" class="btn btn-success"/>
             <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
         </form>

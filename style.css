@@ -1,39 +1,40 @@
 .title{
     text-align: center;
     margin-top: 25px;
-}
-
-.form{
+  }
+  
+  .form{
     margin: auto;
     margin-top: 30px;
     max-width: 80%;
     text-align: left;
-}
-
-input[type='submit'], button, [aria-label]{
+  }
+  
+  input[type='submit'], button, [aria-label]{
     cursor: pointer;
     /* pointer 손가락 모양 */
-}
-
-#edit-box{
+  }
+  
+  #edit-box{
     display: none;
     max-width: 80%;
     margin: auto;
     margin-top: 10px;
-}
-
-td{
+  }
+  
+  td{
     padding-right: 10px;
     text-align: left;
-}
-
-.memo{
+  }
+  
+  .memo{
     background-color: transparent !important;
-}
-
-textarea{
-
+  }
+  
+  textarea{
+  
     width: 100%;
-    height: 6.26em;
+    height: 10em;
     resize: none;
-}
+  }
+  
