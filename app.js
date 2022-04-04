@@ -10,12 +10,12 @@ var app = new function(){
             for(i = 0; i < this.title.length; i++){
                 // data += '<div class="card">';
                 data += '<div class="card-body">'
-                data += '<h5 class="card-title">'+(i+1)+'. '+this.title[i]+'</h5>';
+                data += '<h5 class="card-title">'+this.title[i]+'</h5>';
                 data += '<p>' + this.contents[i] + '</p>';
                 data += '<div class="btn-group" role="group">'
                 // data += '<button onclick="location.href=\'./edit.html\'" onclick="Edit('+ i +')" class="btn btn-warning">Edit</button>';
-                data += '<button onclick="app.Edit('+ i +')" class="btn btn-warning">Edit</button>';
-                data += '<button onclick="app.Delete('+ i +')" class="btn btn-danger">Delete</button>';
+                data += '<button onclick="app.Edit('+ i +')" class="btn btn-secondary">Edit</button>';
+                data += '<button onclick="app.Delete('+ i +')" class="btn btn-light">Delete</button>';
                 data += '</div></div>';
             }
         }
