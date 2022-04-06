@@ -12,7 +12,7 @@
   
   input[type='submit'], button, [aria-label]{
     cursor: pointer;
-    /* pointer 손가락 모양 */
+    /* pointer == 손가락 모양 */
   }
   
   #edit-box{
